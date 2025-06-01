@@ -1,6 +1,6 @@
-<x-layouts.app :title="__('User')">
-    <div class="flex flex-col">
-        <div class="-m-1.5 overflow-x-auto">
+<x-layouts.app :title="__('Dashboard')">
+    <div class="flex h-full w-full flex-1 flex-col gap-4 rounded-xl">
+        <div class="relative h-full flex-1 overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700">
             <div class="p-1.5 min-w-full inline-block align-middle">
                 <div class="overflow-hidden">
                     <table class="min-w-full divide-y divide-neutral-200 dark:divide-neutral-700">
@@ -79,5 +79,4 @@
                 </div>
             </div>
         </div>
-    </div>
 </x-layouts.app>

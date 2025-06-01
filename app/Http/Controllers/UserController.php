@@ -31,17 +31,15 @@ class UserController extends Controller
     {
         $request->validate([
             'name' => $request->name,
-            'neighborhoodAssociation' => $request->neighborhoodAssociation,
-            'dasaWisma' => $request->dasaWisma,
-            'couponNumber' => $request->couponNumber,
+            'neighborhood_association' => $request->neighborhood_association,
+            'dasa_wisma' => $request->dasa_wisma,
             'email' => $request->email,
         ]);
 
         User::create([
             'name' => $request->name,
-            'neighborhoodAssociation' => $request->neighborhoodAssociation,
-            'dasaWisma' => $request->dasaWisma,
-            'couponNumber' => $request->couponNumber,
+            'neighborhood_association' => $request->neighborhood_association,
+            'dasa_wisma' => $request->dasa_wisma,
             'email' => $request->email,
         ]);
 
@@ -72,16 +70,14 @@ class UserController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'neighborhoodAssociation' => 'required',
-            'dasaWisma' => 'required',
-            'couponNumber' => 'required',
+            'neighborhood_association' => 'required',
+            'dasa_wisma' => 'required',
             'email' => 'required',
         ]);
         $user->update([
             'name' => 'required',
-            'neighborhoodAssociation' => 'required',
-            'dasaWisma' => 'required',
-            'couponNumber' => 'required',
+            'neighborhood_association' => 'required',
+            'dasa_wisma' => 'required',
             'email' => 'required',
         ]);
 

@@ -1,15 +1,21 @@
 <?php
 
-use App\Livewire\Settings\Appearance;
-use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
+use App\Livewire\Settings\Password;
+use App\Livewire\Settings\Appearance;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Livewire\Dashboard;
 
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::view( 'dashboard', 'dashboard')
+// Route::view( 'dashboard', 'dashboard')
+//     ->middleware(['auth', 'verified'])
+//     ->name('dashboard');
+
+Route::get( 'dashboard', Dashboard::class)
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
@@ -21,5 +27,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('settings/appearance', Appearance::class)->name('settings.appearance');
 });
 
-Route::resource('user', \App\Http\Controllers\UserController::class)->middleware('admin');
+Route::resource('user',UserController::class)->middleware('admin');
+Route::get('/user', [UserController::class, 'index'])->middleware(['auth'])->name('user.index');
+
 require __DIR__.'/auth.php';

@@ -28,6 +28,4 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::resource('user',UserController::class)->middleware('admin');
-Route::get('/user', [UserController::class, 'index'])->middleware(['auth'])->name('user.index');
-
 require __DIR__.'/auth.php';

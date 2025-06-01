@@ -18,7 +18,7 @@ class EnsureAdminUser
     {
         $user = Auth::user();
 
-        if (!$user || !$user->is_admin) {
+        if (!$user->is_admin) {
             return redirect()->route('dashboard');
         }
         return $next($request);

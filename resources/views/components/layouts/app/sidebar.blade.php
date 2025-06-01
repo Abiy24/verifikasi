@@ -20,6 +20,7 @@
                 </flux:navlist.item>
                 <flux:navlist.item icon="user" :href="route('user.index')">User</flux:navlist.item>
                 <flux:navlist.item icon="document-text" href="#">Print</flux:navlist.item>
+                <flux:navlist.item icon="shield-check" href="#">Verify</flux:navlist.item>
                 </flux:navlist.group>
         </flux:navlist>
 

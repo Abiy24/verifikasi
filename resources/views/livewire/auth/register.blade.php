@@ -18,35 +18,24 @@
 
         <!-- Neighborhood Association -->
         <flux:input
-            wire:model="neighborhoodAssociation"
+            wire:model="neighborhood_association"
             :label="__('Neighborhood Association')"
             type="text"
             required
             autofocus
-            autocomplete="neighborhoodAssociation"
+            autocomplete="neighborhood_association"
             :placeholder="__('Neighborhood Association')"
         />
 
         <!-- Dasa Wisma -->
         <flux:input
-            wire:model="dasaWisma"
+            wire:model="dasa_wisma"
             :label="__('Dasa Wisma')"
             type="text"
             required
             autofocus
-            autocomplete="dasaWisma"
+            autocomplete="dasa_wisma"
             :placeholder="__('Dasa Wisma')"
-        />
-
-        <!-- Coupon Number -->
-        <flux:input
-            wire:model="couponNumber"
-            :label="__('Coupon Number')"
-            type="text"
-            required
-            autofocus
-            autocomplete="couponNumber"
-            :placeholder="__('Coupon Number')"
         />
 
         <!-- Email Address -->

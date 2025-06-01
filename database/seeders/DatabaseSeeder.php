@@ -19,7 +19,8 @@ class DatabaseSeeder extends Seeder
             'neighborhood_association' =>'001',
             'dasa_wisma'=>'Utama',
             'coupon_number'=>'999',
-            'taken_at'=>now()
+            'taken_at'=>now(),
+            'is_admin' =>true,
         ]);
         User::factory(100)->create();
     }

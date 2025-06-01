@@ -19,13 +19,16 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
-    protected $fillable = [
-        'name',
-        'neighborhoodAssociation',
-        'dasaWisma',
-        'couponNumber',
-        'email',
-        'password',
+    // protected $fillable = [
+    //     'name',
+    //     'neighborhood_association',
+    //     'dasa_wisma',
+    //     'coupon_number',
+    //     'email',
+    //     'password',
+    // ];
+    protected $guarded = [
+        'id',
     ];
 
     /**
@@ -48,6 +51,7 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'is_admin' => 'boolean',
         ];
     }
 

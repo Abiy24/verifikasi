@@ -21,5 +21,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('settings/appearance', Appearance::class)->name('settings.appearance');
 });
 
-Route::resource('user', \App\Http\Controllers\UserController::class);
+Route::resource('user', \App\Http\Controllers\UserController::class)->middleware('admin');
 require __DIR__.'/auth.php';
